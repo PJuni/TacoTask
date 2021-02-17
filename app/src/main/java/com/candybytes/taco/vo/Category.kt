@@ -18,6 +18,8 @@ data class Category(
      * Category description.
      */
     @SerializedName("category")
-    val name: String = ""
+    val name: String = "",
 
+    @SerializedName("foods")
+    var foods: List<Food> = emptyList()
 )

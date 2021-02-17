@@ -10,7 +10,19 @@ class MainViewModel @ViewModelInject constructor(
 ) : ViewModel() {
 
     val showBottomBar = MutableLiveData(true)
+    val showSearchField = MutableLiveData(false)
+    val showSearchIcon = MutableLiveData(false)
+    val textSearchField = MutableLiveData<String>()
 
+    fun onSearchTextChanged(text: String) = textSearchField.postValue(text)
 
+    fun onSearchIconClicked() {
+        showSearchField.postValue(true)
+        showSearchIcon.postValue(false)
+    }
 
+    fun onHideSearch() {
+        showSearchField.postValue(false)
+        showSearchIcon.postValue(false)
+    }
 }

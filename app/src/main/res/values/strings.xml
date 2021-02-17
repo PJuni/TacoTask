@@ -2,4 +2,18 @@
     <string name="app_name">Taco challenge</string>
     <string name="menu_category">Category</string>
     <string name="menu_search">Search</string>
+
+    <!-- categories -->
+    <string name="categories_food_qty">%d food items</string>
+    <string name="categories_id">#%d</string>
+    <string name="spinner_text_categories">Categories</string>
+    <string name="spinner_text_foods">Foods</string>
+    <!-- end categories-->
+
+    <!-- permissions -->
+    <string name="permissions_general_ok">Ok</string>
+    <string name="permissions_general_cancel">Cancel</string>
+    <string name="permissions_gallery_title">New access for gallery</string>
+    <string name="permissions_gallery_desc">lorem ipsum</string>
+    <!-- end permissions-->
 </resources>

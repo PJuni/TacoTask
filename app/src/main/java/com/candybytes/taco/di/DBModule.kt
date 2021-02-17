@@ -35,6 +35,7 @@ object DBModule {
             "food"
         )
             .createFromAsset("food.db")
+            .fallbackToDestructiveMigration()
             .build()
     }
 }

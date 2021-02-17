@@ -1,4 +1,4 @@
-package com.candybytes.taco.ui.util
+package com.candybytes.taco.ui.extensions
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

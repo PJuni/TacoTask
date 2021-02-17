@@ -13,4 +13,6 @@ data class Nutrient(
      */
     @SerializedName("qty")
     val qty: String = ""
-)
+) {
+    override fun toString(): String = unit + qty
+}

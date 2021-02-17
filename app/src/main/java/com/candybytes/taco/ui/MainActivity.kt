@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.get
+import androidx.core.widget.addTextChangedListener
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -54,8 +55,11 @@ class MainActivity : AppCompatActivity() {
             //setup header and footer
             toolbar.setupWithNavController(navController, appBarConfiguration)
             navBottomBar.setupWithNavController(navController)
-        }
 
+            textAppbarSearch.addTextChangedListener {
+                this@MainActivity.viewModel.onSearchTextChanged(it.toString())
+            }
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

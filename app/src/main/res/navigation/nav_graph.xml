@@ -7,14 +7,32 @@
 
     <fragment
         android:id="@+id/categoriesFragment"
-        android:name="com.candybytes.taco.ui.fragments.CategoryListFragment"
+        android:name="com.candybytes.taco.ui.fragments.category.CategoryListFragment"
         android:label="@string/menu_category"
         tools:layout="@layout/fragment_category_list" />
 
     <fragment
         android:id="@+id/searchFoodFragment"
-        android:name="com.candybytes.taco.ui.fragments.SearchFoodFragment"
+        android:name="com.candybytes.taco.ui.fragments.food.SearchFoodFragment"
         android:label="@string/menu_search"
-        tools:layout="@layout/fragment_search_food" />
+        tools:layout="@layout/fragment_search_food" >
+        <action
+            android:id="@+id/action_searchFoodFragment_to_foodDetailFragment"
+            app:destination="@id/foodDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/searchFoodFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/foodDetailFragment"
+        android:name="com.candybytes.taco.ui.fragments.food.FoodDetailFragment"
+        tools:layout="@layout/fragment_food_detail" >
+        <argument
+            android:name="foodId"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>
